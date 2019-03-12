@@ -52,6 +52,8 @@ async def has_target(path, target):
     generator = get_generator(path)
     if 'Unix Makefiles' in generator:
         return target in await get_makefile_targets(path)
+    if 'NMake Makefiles' in generator:
+        return target in await get_makefile_targets(path)
     if 'Ninja' in generator:
         return target in get_ninja_targets(path)
     if 'Visual Studio' in generator:
