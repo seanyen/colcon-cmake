@@ -151,7 +151,7 @@ class CmakeBuildTask(TaskExtensionPoint):
                     'VisualStudioVersion is not set, '
                     'please run within a Visual Studio Command Prompt.')
             supported_vsv = {
-                '15.0': 'Ninja',
+                '15.0': 'NMake Makefiles',
                 '14.0': 'Visual Studio 14 2015 Win64',
             }
             if vsv not in supported_vsv:
