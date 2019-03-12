@@ -293,10 +293,7 @@ class CmakeBuildTask(TaskExtensionPoint):
         if jobs is None:
             # the number of cores can't be determined
             return []
-        return [
-            '-j{jobs}'.format_map(locals()),
-            '-l{jobs}'.format_map(locals()),
-        ]
+        return []
 
     async def _install(self, args, env):
         self.progress('install')
